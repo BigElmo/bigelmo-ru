@@ -1,0 +1,51 @@
+# Dependencies and downloaded tools
+/vendor/
+/composer.phar
+/phpunit.phar
+/auth.json
+
+# Local environment and configuration
+/.env
+/.env.*
+!/.env.example
+!/.env.*.example
+/config/*.local.php
+/docker-compose.override.yml
+
+# IDE and editor metadata
+/.idea/
+/.vscode/
+/.fleet/
+/nbproject/
+/.buildpath
+/.project
+/.settings/
+*.sublime-project
+*.sublime-workspace
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs, caches, coverage and test artifacts
+*.log
+/.phpunit.cache/
+/.phpunit.result.cache
+/.php-cs-fixer.cache
+/.phpstan/
+/coverage/
+/tests/_output/
+/tests/_support/_generated/
+/tests/Support/_generated/
+/tests/Support/*Tester.php
+/phpunit.xml
+
+# Vagrant state
+/.vagrant/
+
+# Yii generated runtime and published assets
+/runtime/*
+!/runtime/.gitignore
+/web/assets/*
+!/web/assets/.gitignore
