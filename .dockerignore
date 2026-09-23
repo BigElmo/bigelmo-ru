@@ -1,0 +1,14 @@
+.git
+.github
+.idea
+.vscode
+
+runtime/*
+web/assets/*
+
+.env
+.env.*
+
+docker-compose*.yml
+
+tests
