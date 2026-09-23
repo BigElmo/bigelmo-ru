@@ -34,12 +34,14 @@
         "yiisoft/yii2-coding-standards": "^3.0",
         "yiisoft/yii2-debug": "~2.1.0",
         "yiisoft/yii2-faker": "~2.0.0",
-        "yiisoft/yii2-gii": "~2.2.0"
+        "yiisoft/yii2-gii": "~2.2.0",
+        "phpro/grumphp": "^2.23"
     },
     "config": {
         "allow-plugins": {
             "yiisoft/yii2-composer": true,
-            "codeception/c3": true
+            "codeception/c3": true,
+            "phpro/grumphp": true
         },
         "process-timeout": 1800,
         "fxp-asset": {

@@ -1,0 +1,10 @@
+grumphp:
+    tasks:
+        composer: ~
+        jsonlint:
+            detect_key_conflicts: true
+        yamllint: ~
+        phpcs:
+            standard: phpcs.xml.dist
+        phpstan:
+            configuration: phpstan.neon
