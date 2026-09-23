@@ -1,4 +1,6 @@
 grumphp:
+    fixer:
+        fix_by_default: true
     tasks:
         composer: ~
         jsonlint:

@@ -14,6 +14,7 @@ if (!is_string($cookieValidationKey) || trim($cookieValidationKey) === '') {
 
 $config = [
     'id' => 'basic',
+    'name' => 'BigElmo',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'container' => [
