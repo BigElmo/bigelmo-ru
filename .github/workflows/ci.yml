@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+  pull_request:
+    branches:
+      - main
+      - staging
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build PHP image
+        run: |
+          docker build \
+          -f docker/php/Dockerfile \
+          -t aboutbigelmo-php:test \
+          .
+
+      - name: Check Yii
+        run: |
+          docker run --rm \
+          aboutbigelmo-php:test \
+          php yii help
+
+      - name: Composer validate
+        run: |
+          docker run --rm \
+          aboutbigelmo-php:test \
+          composer validate --no-check-publish
