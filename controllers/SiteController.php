@@ -71,6 +71,26 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionHealth(): array
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        try {
+            Yii::$app->db
+                ->createCommand('SELECT 1')
+                ->queryScalar();
+
+            return [
+                'status' => 'ok',
+            ];
+        } catch (\Throwable $e) {
+            Yii::$app->response->statusCode = 503;
+            return [
+                'status' => 'error',
+            ];
+        }
+    }
+
     /**
      * Displays homepage.
      *
